@@ -26,3 +26,15 @@ Programmatically generate olympic rings.
  
  **3. Open url in browser**<br />
 `http://localhost:3434`
+
+### Reflection
+Was able to complete the challenge in a hour then took the other hour to clean it up visually a bit.
+I made it a personal goal to use just PHP and a drawing method of a single pixel. 
+**In art**, everyting can be represented by a collection of points in space arranged with a specific algorithm. With some tweaking of those points' attributes/properties anything seen with the naked eye can be replicated.
+
+> So, What's Next
+
+Well, i'm going to branch this off then convert this repo into a tutorial documenting my thought process of attacking this challenge. Most likely before I even make that tutorial i'm going to clean up that code. *It's JANK City right now....Death of Janky Code.*
+
+###Result: [The Olympic Rings](https://raw.githubusercontent.com/webguywalker/puzzle_rings/master/olympic_rings.png)
+
