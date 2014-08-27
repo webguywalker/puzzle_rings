@@ -42,8 +42,9 @@ function draw_ring($rx, $ry, $radius, $color) {
 
 	$ring_center = array('x'=>$rx,'y'=>$ry);
 
-	for ($i = 0; $i < 360; $i++) {
-
+	$range = range(0,360,.1);
+	foreach($range as $k=>$v) {
+		$i = $v;
 		if($color == $blue && $i > 57 && $i < 67) {
 			continue;
 		}
@@ -62,7 +63,7 @@ function draw_ring($rx, $ry, $radius, $color) {
 
 		$degrees = $i;
 
-		for ( $e=0; $e < 20; $e++) {
+		for ( $e=0; $e < 1; $e++) {
 			$y_from_ring_center = sin(deg2rad($degrees))*($radius + $e);
 			$x_from_ring_center = cos(deg2rad($degrees))*($radius + $e);
 			$x = $ring_center['x'] + $x_from_ring_center;
@@ -88,8 +89,10 @@ for($i=1;$i<=$rings['total']; $i++) {
 	
 	//Offset by -1 because I started $i at 1
 	$color = $rings['order'][$i-1];
-	
-	draw_ring($rx,$ry,$rings['radius'],$color);
+
+	for($r=0; $r<15;$r++){
+		draw_ring($rx,$ry,$rings['radius'] + $r,$color);
+	}
 }
 
 header('Content-Type: image/png');
